@@ -10,7 +10,7 @@ export function useTasksLists () {
       setError(null)
       setIsLoading(true)
       const resp = await fetch(
-        'https://task-app-server-s9f2.onrender.com/api/tasks'
+        'https://task-app-server-rvin.onrender.com/api/tasks'
       )
       if (!resp.ok) {
         setError('We had a problem problem fetching data')
@@ -31,7 +31,7 @@ export function useTasksLists () {
     try {
       setError(null)
       const resp = await fetch(
-        `https://task-app-server-s9f2.onrender.com/api/tasks/${id}`,
+        `https://task-app-server-rvin.onrender.com/api/tasks/${id}`,
         {
           method: 'DELETE'
         }
