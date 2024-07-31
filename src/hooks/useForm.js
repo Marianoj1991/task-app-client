@@ -24,7 +24,7 @@ export default function useForm ({ id = null }) {
 
   const handleUpdateTask = (id) => {
     try {
-      fetch(`https://task-app-server-y9sm.onrender.com/api/tasks/${id}`, {
+      fetch(`https://task-app-server-rvin.onrender.com/api/tasks/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ export default function useForm ({ id = null }) {
     if (!task.title && !task.description) return
     if (!isUpdating) {
       try {
-        fetch('https://task-app-server-y9sm.onrender.com/api/tasks', {
+        fetch('https://task-app-server-rvin.onrender.com/api/tasks', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ export default function useForm ({ id = null }) {
   const handleGetTask = async (id) => {
     try {
       const resp = await fetch(
-        `https://task-app-server-y9sm.onrender.com/api/tasks/${id}`
+        `https://task-app-server-rvin.onrender.com/api/tasks/${id}`
       )
       if (!resp.ok) {
         setError('ERROR: not exist a task with id' + id)
